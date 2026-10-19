@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Two T Basketball Club – Học bóng rổ cùng Two T</title>
+<meta name="description" content="Lớp học và sân chơi bóng rổ cho trẻ em lẫn người lớn tại Sân bóng Thới Tử. Đăng ký học thử ngay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0a0a; --ink:#141414; --yellow:#ffd21f; --cyan:#12a8e6; --paper:#f1f1ec; --ph:#e2e2dc; --white:#fff; --muted:#5c5c5c;
+  --head:'Barlow Condensed','Arial Narrow',sans-serif; --body:'Be Vietnam Pro',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);text-transform:uppercase;line-height:1;letter-spacing:.01em}
+h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:700;margin-bottom:14px}
+section{padding:96px 0}
+.lead{color:var(--muted);max-width:620px;margin-bottom:36px}
+.btn{display:inline-block;font-weight:700;font-size:.95rem;padding:14px 26px;border-radius:4px;border:2px solid var(--yellow);transition:.2s;cursor:pointer;font-family:var(--body)}
+.btn-y{background:var(--yellow);color:var(--black)}
+.btn-y:hover{background:#ffe063;transform:translateY(-2px)}
+.btn-o{background:transparent;color:var(--white);border-color:var(--cyan)}
+.btn-o:hover{background:var(--cyan);color:var(--black);transform:translateY(-2px)}
+.btn-k{background:var(--black);color:var(--white);border-color:var(--black)}
+.btn-k:hover{background:#222}
+.ph{background:var(--ph);display:grid;place-items:center;color:#8a8a84;font-size:.8rem;text-align:center;padding:12px;border-radius:2px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:var(--black);border-bottom:1px solid #222}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--head);font-weight:800;font-size:1.4rem;color:var(--white)}
+.logo i{width:24px;height:24px;border-radius:50%;background:var(--yellow);display:inline-block;position:relative}
+.logo i::after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(90deg,transparent 46%,var(--black) 46% 54%,transparent 54%)}
+.logo b{color:var(--yellow)}
+.menu{display:flex;align-items:center;gap:24px;font-size:.8rem;font-weight:500;color:#ddd}
+.menu a:hover{color:var(--yellow)}
+.menu .btn{padding:8px 14px;font-size:.78rem;color:var(--black)}
+.menu .btn:hover{color:var(--black)}
+
+/* HERO */
+.hero{background:radial-gradient(circle at 78% 40%,#0b3c52 0,transparent 45%),var(--black);padding:56px 0 0;overflow:hidden;position:relative}
+.hero::before{content:"";position:absolute;right:-6%;top:-10%;width:34%;height:130%;background:var(--yellow);transform:skewX(-14deg);opacity:.95;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.hero-title{font-family:var(--head);font-weight:800;font-style:italic;text-transform:uppercase;line-height:.82;font-size:clamp(4rem,14vw,10.5rem);color:var(--yellow);display:block;position:relative;padding-top:20px}
+.hero-title .l2{color:var(--cyan);display:block;margin-top:-.02em;-webkit-text-stroke:2px var(--cyan)}
+.hero-title .no1{position:absolute;right:0;top:4%;font-size:.42em;color:var(--white);transform:rotate(-3deg);-webkit-text-stroke:0}
+.hero-info{display:flex;gap:56px;justify-content:center;padding:34px 0 40px;color:#eee;font-size:.95rem;flex-wrap:wrap}
+.hero-info span{display:flex;align-items:center;gap:10px}
+.hero-info em{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:6px;background:var(--yellow);color:var(--black);font-size:.8rem;font-weight:700}
+.hero-cta{background:var(--black);text-align:center;padding:80px 0 90px;position:relative;z-index:1}
+.hero-cta h2{color:var(--white);font-size:clamp(2.2rem,5vw,3.4rem)}
+.hero-cta h2 span{color:var(--yellow)}
+.hero-cta p{color:#c9c9c9;max-width:520px;margin:0 auto 30px;font-size:.95rem}
+.hero-cta .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* STATS */
+.stats{background:var(--yellow);padding:44px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats strong{display:block;font-family:var(--head);font-size:clamp(2.2rem,5vw,3.2rem);font-weight:800;line-height:1}
+.stats span{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+
+/* ABOUT */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .ph{aspect-ratio:1/.8;min-height:300px}
+.about p{margin-bottom:14px;color:#333}
+.about .tag{color:var(--muted);font-size:.9rem}
+
+/* CLASSES */
+.classes{background:var(--paper)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--white);border-top:4px solid var(--yellow);padding:26px 22px;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.1)}
+.card small{color:var(--cyan);font-weight:700;letter-spacing:.12em;font-size:.68rem}
+.card h3{font-size:1.5rem;margin:8px 0 10px}
+.card p{font-size:.84rem;color:#444;margin-bottom:12px}
+.card .meta{font-size:.74rem;color:var(--muted)}
+.card.dark{background:var(--black);color:var(--white);border-top-color:var(--cyan)}
+.card.dark p,.card.dark .meta{color:#ccc}
+.card.dark small{color:var(--yellow)}
+
+/* COACH */
+.coach .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.coach .ph{aspect-ratio:1/.9;min-height:300px}
+.coach p{margin-bottom:14px;color:#333}
+
+/* ACHIEVEMENTS */
+.ach{background:var(--paper)}
+.ach-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:56px}
+.ach-card{background:var(--white);border-top:4px solid var(--yellow);padding:22px}
+.ach-card small{color:var(--cyan);font-weight:700;font-size:.72rem}
+.ach-card h3{font-size:1.35rem;margin:6px 0}
+.ach-card p{font-size:.82rem;color:#444}
+.ach h3.sub{font-size:1.6rem;margin-bottom:22px}
+.students{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
+.stu{display:flex;gap:14px;font-size:.8rem}
+.stu .av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ph);display:grid;place-items:center;font-size:.65rem;color:#888}
+.stu b{display:block}
+.stu span{color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.two .ph{aspect-ratio:16/8}
+
+/* PATH */
+.path{background:var(--black);color:var(--white)}
+.path h2{margin-bottom:44px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step b{font-family:var(--head);font-size:3.4rem;color:var(--yellow);line-height:1;display:block;margin-bottom:6px}
+.step h3{font-size:1.3rem;margin-bottom:8px}
+.step p{font-size:.84rem;color:#bbb}
+
+/* GALLERY */
+.gallery h3.cat{color:var(--cyan);font-size:1.3rem;margin:34px 0 14px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.grid4 .ph{aspect-ratio:1/1.05;transition:.25s}
+.grid4 .ph:hover{transform:scale(1.03)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid3 .ph{aspect-ratio:16/10;position:relative}
+.play{width:46px;height:46px;border-radius:50%;background:var(--yellow);color:var(--black);display:grid;place-items:center;font-size:1rem;margin-bottom:6px}
+.more{margin-top:26px}
+
+/* SCHEDULE */
+.schedule{background:var(--paper)}
+table{width:100%;border-collapse:collapse;background:var(--white);font-size:.9rem}
+th{background:var(--black);color:var(--white);text-align:left;padding:12px 18px;font-size:.8rem}
+td{padding:12px 18px;border-bottom:1px solid #e8e8e2;color:#444}
+
+/* FAQ */
+.faq .wrap{max-width:760px}
+details{border-bottom:1px solid #e3e3dd;padding:16px 0}
+summary{font-weight:700;cursor:pointer;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--cyan);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{font-size:.88rem;color:#444;margin-top:8px}
+
+/* SIGNUP */
+.signup{background:var(--cyan)}
+.signup .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.signup h2{font-size:clamp(2.2rem,4.5vw,3.2rem)}
+.signup p{margin-bottom:10px;font-size:.92rem}
+form{background:var(--white);padding:28px;border-radius:4px;display:grid;gap:14px}
+label{font-size:.74rem;font-weight:600;display:grid;gap:5px}
+input,select{font:inherit;font-size:.9rem;padding:11px 12px;border:1px solid #ddd;border-radius:3px;width:100%;background:var(--white)}
+input:focus,select:focus{outline:2px solid var(--yellow);border-color:var(--black)}
+form .btn{width:100%;margin-top:4px}
+.ok{display:none;text-align:center;font-weight:600;font-size:.9rem}
+
+/* FOOTER */
+footer{background:var(--black);color:#aaa;padding:22px 0;font-size:.74rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+
+.float{position:fixed;right:0;top:62%;z-index:40;background:var(--yellow);color:var(--black);font-weight:700;font-size:.78rem;padding:12px 14px;border-radius:6px 0 0 6px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  section{padding:64px 0}
+  .menu a:not(.btn){display:none}
+  .cards,.steps,.grid4{grid-template-columns:repeat(2,1fr)}
+  .about .wrap,.coach .wrap,.signup .wrap,.two{grid-template-columns:1fr;gap:32px}
+  .ach-cards,.students,.grid3{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .coach .ph{order:-1}
+  .hero::before{width:50%}
+  .hero-title .no1{position:static;display:block;transform:none;font-size:.4em;margin-bottom:8px}
+}
+@media(max-width:520px){.cards,.steps{grid-template-columns:1fr}table{font-size:.8rem}th,td{padding:10px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><i></i>TWO <b>T</b></a>
+    <div class="menu">
+      <a href="#ve-clb">Về CLB</a><a href="#lop-hoc">Lớp học</a><a href="#thanh-tich">Thành tích</a><a href="#thu-vien">Thư viện</a><a href="#lich-tap">Lịch tập</a>
+      <a href="#dang-ky" class="btn btn-y">Đăng ký học thử</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <h1 class="hero-title">Two T<span class="no1">We're #1!</span><span class="l2">Basketball</span></h1>
+    <div class="hero-info">
+      <span><em>⌖</em> Sân bóng Thới Tử</span>
+      <span><em>✆</em> Liên hệ: 0385501560</span>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <div class="wrap">
+      <h2>Học bóng rổ cùng <span>Two T</span></h2>
+      <p>Lớp học và sân chơi bóng rổ cho trẻ em lẫn người lớn tại Sân bóng Thới Tử. Từ lần đầu cầm bóng đến thi đấu giao hữu cùng đồng đội.</p>
+      <div class="btns">
+        <a href="#dang-ky" class="btn btn-y">Đăng ký học thử</a>
+        <a href="tel:0385501560" class="btn btn-o">Gọi 0385 501 560</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div><strong>[XX]+</strong><span>Học viên và thành viên</span></div>
+    <div><strong>[X]</strong><span>Năm hoạt động</span></div>
+    <div><strong>[XXX]</strong><span>Trận giao hữu và giải đấu</span></div>
+    <div><strong>[X]</strong><span>Buổi tập mỗi tuần</span></div>
+  </div>
+</div>
+
+<section class="about reveal" id="ve-clb">
+  <div class="wrap">
+    <div class="ph">[Ảnh đội Two T hoặc nhóm chung]</div>
+    <div>
+      <h2>Về Two T</h2>
+      <p class="tag">[Câu chuyện thành lập CLB: ai lập, vì sao, bắt đầu từ đâu.]</p>
+      <p>Tại Two T, bóng rổ không chỉ là kỹ thuật. Đó là kỷ luật, tinh thần đồng đội và niềm vui được vận động, ở mọi lứa tuổi và mọi trình độ.</p>
+    </div>
+  </div>
+</section>
+
+<section class="classes reveal" id="lop-hoc">
+  <div class="wrap">
+    <h2>Các lớp học</h2>
+    <p class="lead">Chọn lớp phù hợp với độ tuổi và trình độ. Chưa chắc nên học lớp nào? Đăng ký học thử, huấn luyện viên sẽ tư vấn.</p>
+    <div class="cards">
+      <article class="card"><small>THIẾU NHI</small><h3>Lớp làm quen</h3><p>Độ tuổi [X–X]. Làm quen bóng, phát triển thể chất, học qua trò chơi.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
+      <article class="card"><small>THIẾU NIÊN</small><h3>Lớp kỹ thuật</h3><p>Độ tuổi [X–X]. Rê bóng, ném rổ, di chuyển chân, tập thi đấu đội.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
+      <article class="card"><small>NGƯỜI LỚN</small><h3>Lớp cơ bản và rèn thể lực</h3><p>Dành cho người mới hoặc chơi lại bóng rổ, kết hợp thể lực.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
+      <article class="card dark"><small>NÂNG CAO</small><h3>Chiến thuật và thi đấu</h3><p>Phối hợp đội, phòng thủ, tấn công theo hệ thống, giao hữu cùng các CLB khác.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="coach reveal">
+  <div class="wrap">
+    <div>
+      <h2>Huấn luyện viên</h2>
+      <p><b>[Tên huấn luyện viên]</b>, người sáng lập và dẫn dắt các lớp tại Two T.</p>
+      <p style="color:var(--muted)">[Kinh nghiệm thi đấu, chứng chỉ, số năm giảng dạy, thành tích đào tạo.]</p>
+    </div>
+    <div class="ph">[Ảnh huấn luyện viên]</div>
+  </div>
+</section>
+
+<section class="ach reveal" id="thanh-tich">
+  <div class="wrap">
+    <h2>Thành tích và giải đấu</h2>
+    <p class="lead">Những dấu mốc Two T đã cùng nhau đi qua trên sân bóng.</p>
+    <div class="ach-cards">
+      <div class="ach-card"><small>[NĂM]</small><h3>[Tên giải đấu]</h3><p><b>[Hạng nhất / Á quân / Tham dự]</b><br>[Mô tả ngắn: đội nào, địa điểm.]</p></div>
+      <div class="ach-card"><small>[NĂM]</small><h3>[Tên giải đấu]</h3><p><b>[Hạng nhất / Á quân / Tham dự]</b><br>[Mô tả ngắn: đội nào, địa điểm.]</p></div>
+      <div class="ach-card"><small>[NĂM]</small><h3>[Tên giải đấu]</h3><p><b>[Hạng nhất / Á quân / Tham dự]</b><br>[Mô tả ngắn: đội nào, địa điểm.]</p></div>
+    </div>
+    <h3 class="sub">Học viên nổi bật</h3>
+    <div class="students">
+      <div class="stu"><div class="av">Ảnh</div><div><b>[Tên học viên]</b><span>[Thành tích riêng, tiến bộ nổi bật]</span></div></div>
+      <div class="stu"><div class="av">Ảnh</div><div><b>[Tên học viên]</b><span>[Thành tích riêng, tiến bộ nổi bật]</span></div></div>
+      <div class="stu"><div class="av">Ảnh</div><div><b>[Tên học viên]</b><span>[Thành tích riêng, tiến bộ nổi bật]</span></div></div>
+    </div>
+    <div class="two"><div class="ph">[Ảnh nhận cúp / nhận huy chương 1]</div><div class="ph">[Ảnh nhận cúp / nhận huy chương 2]</div></div>
+  </div>
+</section>
+
+<section class="path reveal">
+  <div class="wrap">
+    <h2>Lộ trình tập luyện</h2>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>Nền tảng</h3><p>Làm quen bóng, tư thế, thể lực cơ bản.</p></div>
+      <div class="step"><b>02</b><h3>Kỹ thuật</h3><p>Rê bóng, chuyền, ném rổ, layup đúng kỹ thuật.</p></div>
+      <div class="step"><b>03</b><h3>Chiến thuật</h3><p>Phối hợp đội, phòng thủ, tấn công theo hệ thống.</p></div>
+      <div class="step"><b>04</b><h3>Thi đấu</h3><p>Giao hữu, giải đấu, tích lũy kinh nghiệm thực chiến.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery reveal" id="thu-vien">
+  <div class="wrap">
+    <h2>Thư viện ảnh và video</h2>
+    <p class="lead" style="margin-bottom:0">Không khí buổi tập, những trận đấu và khoảnh khắc của Two T.</p>
+    <h3 class="cat">Buổi tập</h3>
+    <div class="grid4"><div class="ph">[Ảnh buổi tập 1]</div><div class="ph">[Ảnh buổi tập 2]</div><div class="ph">[Ảnh buổi tập 3]</div><div class="ph">[Ảnh buổi tập 4]</div></div>
+    <h3 class="cat">Giải đấu và giao hữu</h3>
+    <div class="grid4"><div class="ph">[Ảnh thi đấu 1]</div><div class="ph">[Ảnh thi đấu 2]</div><div class="ph">[Ảnh thi đấu 3]</div><div class="ph">[Ảnh thi đấu 4]</div></div>
+    <h3 class="cat">Clip highlight</h3>
+    <div class="grid3">
+      <div class="ph"><div><div class="play">▶</div>[Video highlight 1]</div></div>
+      <div class="ph"><div><div class="play">▶</div>[Video highlight 2]</div></div>
+      <div class="ph"><div><div class="play">▶</div>[Video highlight 3]</div></div>
+    </div>
+    <a href="#" class="btn btn-k more">Xem thêm trên [Facebook / TikTok]</a>
+  </div>
+</section>
+
+<section class="schedule reveal" id="lich-tap">
+  <div class="wrap">
+    <h2>Lịch tập và địa điểm</h2>
+    <p class="lead" style="margin-bottom:22px">Sân tập: <b>Sân bóng Thới Tử</b> [địa chỉ chi tiết]</p>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Ngày</th><th>Giờ</th><th>Lớp</th></tr></thead>
+      <tbody>
+        <tr><td>[Thứ X]</td><td>[XX:XX – XX:XX]</td><td>[Thiếu nhi]</td></tr>
+        <tr><td>[Thứ X]</td><td>[XX:XX – XX:XX]</td><td>[Thiếu niên]</td></tr>
+        <tr><td>[Thứ X]</td><td>[XX:XX – XX:XX]</td><td>[Người lớn]</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section class="faq reveal">
+  <div class="wrap">
+    <h2>Câu hỏi thường gặp</h2>
+    <details><summary>Chưa biết chơi bóng rổ có học được không?</summary><p>Được. Các lớp có bài giảng cho người chưa từng chơi, lo cả trẻ em và người lớn.</p></details>
+    <details><summary>Buổi học thử có mất phí không?</summary><p>[Buổi học thử miễn phí / ưu đãi giảm giá tuần đầu theo chính sách CLB.]</p></details>
+    <details><summary>Cần chuẩn bị gì khi đến tập?</summary><p>Giày thể thao, quần áo gọn nhẹ và chai nước. Bóng sẽ có sẵn tại sân.</p></details>
+    <details><summary>Học phí tính như thế nào?</summary><p>[Theo tháng hoặc theo khóa, có giảm giá đăng ký nhóm học anh chị em.]</p></details>
+  </div>
+</section>
+
+<section class="signup reveal" id="dang-ky">
+  <div class="wrap">
+    <div>
+      <h2>Đăng ký học thử</h2>
+      <p>Để lại thông tin, Two T sẽ liên hệ xếp lịch buổi học thử phù hợp với bạn hoặc con bạn.</p>
+      <p><b>Liên hệ:</b> 0385 501 560</p>
+      <p><b>Địa chỉ:</b> Sân bóng Thới Tử</p>
+    </div>
+    <form id="f" novalidate>
+      <label>Họ và tên<input name="name" required autocomplete="name"></label>
+      <label>Số điện thoại<input name="phone" type="tel" required pattern="[0-9 +]{9,13}" autocomplete="tel"></label>
+      <label>Tuổi người học<input name="age" type="number" min="3" max="80"></label>
+      <label>Lớp quan tâm
+        <select name="cls"><option>Thiếu nhi</option><option>Thiếu niên</option><option>Người lớn</option><option>Nâng cao</option></select>
+      </label>
+      <button class="btn btn-k" type="submit">Gửi đăng ký</button>
+      <p class="ok" id="ok">Cảm ơn bạn! Two T sẽ liên hệ sớm.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#top" class="logo" style="font-size:1.1rem"><i style="width:18px;height:18px"></i>TWO <b>T</b></a>
+    <span>© Two T Basketball Club</span>
+  </div>
+</footer>
+
+<a href="tel:0385501560" class="float">Gọi ngay</a>
+
+<script>
+const f=document.getElementById('f');
+f.addEventListener('submit',e=>{
+  e.preventDefault();
+  if(!f.reportValidity())return;
+  // TODO: gắn endpoint thật (Google Form / Zalo / API)
+  document.getElementById('ok').style.display='block';
+  f.reset();
+});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
