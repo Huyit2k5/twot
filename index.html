@@ -72,6 +72,9 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .photo{width:100%;height:auto;border-radius:4px;display:block;object-fit:cover}
 .about .photo{box-shadow:12px 12px 0 var(--yellow)}
 .grid4 .photo{aspect-ratio:1/1.05;transition:.25s}
+.photo.wide{aspect-ratio:16/8}
+.coach .photo{box-shadow:-12px 12px 0 var(--cyan)}
+.vid{background-size:cover;background-position:center;color:#fff}
 .grid4 .photo:hover{transform:scale(1.03)}
 .cards.two-col{grid-template-columns:repeat(2,1fr);max-width:860px}
 .about p{margin-bottom:14px;color:#333}
@@ -208,10 +211,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 
 <div class="stats">
   <div class="wrap">
-    <div><strong>[XX]+</strong><span>Học viên và thành viên</span></div>
-    <div><strong>[X]</strong><span>Năm hoạt động</span></div>
-    <div><strong>[XXX]</strong><span>Trận giao hữu và giải đấu</span></div>
-    <div><strong>[X]</strong><span>Buổi tập mỗi tuần</span></div>
+    <div><strong>80+</strong><span>Học viên và thành viên</span></div>
+    <div><strong>3</strong><span>Năm hoạt động</span></div>
+    <div><strong>50+</strong><span>Trận giao hữu và giải đấu</span></div>
+    <div><strong>6</strong><span>Buổi tập mỗi tuần</span></div>
   </div>
 </div>
 
@@ -220,7 +223,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
     <img class="photo" src="img/team1.jpg" alt="Đội bóng rổ Two T cùng huấn luyện viên chụp ảnh chung" width="394" height="172" loading="lazy">
     <div>
       <h2>Về Two T</h2>
-      <p class="tag">[Câu chuyện thành lập CLB: ai lập, vì sao, bắt đầu từ đâu.]</p>
+      <p class="tag">Two T được thành lập với mong muốn tạo ra một sân chơi bóng rổ gần gũi, nơi mọi người đều có thể bắt đầu từ con số 0.</p>
       <p>Tại Two T, bóng rổ không chỉ là kỹ thuật. Đó là kỷ luật, tinh thần đồng đội và niềm vui được vận động, ở mọi lứa tuổi và mọi trình độ.</p>
     </div>
   </div>
@@ -231,8 +234,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
     <h2>Các lớp học</h2>
     <p class="lead">Hai khóa học đang chiêu sinh. Chưa chắc nên học khóa nào? Đăng ký học thử, huấn luyện viên sẽ tư vấn.</p>
     <div class="cards two-col">
-      <article class="card"><small>CƠ BẢN</small><h3>Khóa bóng rổ cơ bản</h3><p>Làm quen bóng, tư thế, rê bóng, chuyền, ném rổ và luật chơi. Phù hợp cho người mới bắt đầu.</p><div class="meta"><b>Lịch:</b> Thứ 2-4-6 hoặc Thứ 3-5-7 · 17h30 – 19h00<br>Học phí: [XXX.000đ/tháng]</div></article>
-      <article class="card dark"><small>NÂNG CAO</small><h3>Khóa bóng rổ nâng cao</h3><p>Hoàn thiện kỹ thuật, phối hợp đội, phòng thủ, tấn công theo hệ thống và thi đấu giao hữu.</p><div class="meta"><b>Lịch:</b> Thứ 3-5-7 · 19h30 – 21h00<br>Học phí: [XXX.000đ/tháng]</div></article>
+      <article class="card"><small>CƠ BẢN</small><h3>Khóa bóng rổ cơ bản</h3><p>Làm quen bóng, tư thế, rê bóng, chuyền, ném rổ và luật chơi. Phù hợp cho người mới bắt đầu.</p><div class="meta"><b>Lịch:</b> Thứ 2-4-6 hoặc Thứ 3-5-7 · 17h30 – 19h00<br>Học phí: 500.000đ/tháng</div></article>
+      <article class="card dark"><small>NÂNG CAO</small><h3>Khóa bóng rổ nâng cao</h3><p>Hoàn thiện kỹ thuật, phối hợp đội, phòng thủ, tấn công theo hệ thống và thi đấu giao hữu.</p><div class="meta"><b>Lịch:</b> Thứ 3-5-7 · 19h30 – 21h00<br>Học phí: 600.000đ/tháng</div></article>
     </div>
   </div>
 </section>
@@ -241,10 +244,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   <div class="wrap">
     <div>
       <h2>Huấn luyện viên</h2>
-      <p><b>[Tên huấn luyện viên]</b>, người sáng lập và dẫn dắt các lớp tại Two T.</p>
-      <p style="color:var(--muted)">[Kinh nghiệm thi đấu, chứng chỉ, số năm giảng dạy, thành tích đào tạo.]</p>
+      <p><b>Huấn luyện viên Nguyễn Văn A</b>, người sáng lập và dẫn dắt các lớp tại Two T.</p>
+      <p style="color:var(--muted)">Hơn 8 năm thi đấu và giảng dạy bóng rổ phong trào, có chứng chỉ huấn luyện cơ bản, từng dẫn dắt nhiều đội tham gia giải trong khu vực.</p>
     </div>
-    <div class="ph">[Ảnh huấn luyện viên]</div>
+    <img class="photo" src="img/team2.jpg" alt="Huấn luyện viên và học viên Two T" width="394" height="179" loading="lazy">
   </div>
 </section>
 
@@ -253,17 +256,17 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
     <h2>Thành tích và giải đấu</h2>
     <p class="lead">Những dấu mốc Two T đã cùng nhau đi qua trên sân bóng.</p>
     <div class="ach-cards">
-      <div class="ach-card"><small>[NĂM]</small><h3>[Tên giải đấu]</h3><p><b>[Hạng nhất / Á quân / Tham dự]</b><br>[Mô tả ngắn: đội nào, địa điểm.]</p></div>
-      <div class="ach-card"><small>[NĂM]</small><h3>[Tên giải đấu]</h3><p><b>[Hạng nhất / Á quân / Tham dự]</b><br>[Mô tả ngắn: đội nào, địa điểm.]</p></div>
-      <div class="ach-card"><small>[NĂM]</small><h3>[Tên giải đấu]</h3><p><b>[Hạng nhất / Á quân / Tham dự]</b><br>[Mô tả ngắn: đội nào, địa điểm.]</p></div>
+      <div class="ach-card"><small>2024</small><h3>Giải bóng rổ phong trào TP.HCM</h3><p><b>Hạng Nhì</b><br>Đội Two T tham dự bảng thiếu niên, thi đấu tại nhà thi đấu quận.</p></div>
+      <div class="ach-card"><small>2024</small><h3>Giao hữu cùng các CLB</h3><p><b>Tham dự</b><br>Các trận giao hữu giúp học viên làm quen với thi đấu thực tế.</p></div>
+      <div class="ach-card"><small>2025</small><h3>Giải mùa hè Thới Tứ</h3><p><b>Hạng Ba</b><br>Đội nâng cao thi đấu tại Sân vận động Thới Tứ.</p></div>
     </div>
     <h3 class="sub">Học viên nổi bật</h3>
     <div class="students">
-      <div class="stu"><div class="av">Ảnh</div><div><b>[Tên học viên]</b><span>[Thành tích riêng, tiến bộ nổi bật]</span></div></div>
-      <div class="stu"><div class="av">Ảnh</div><div><b>[Tên học viên]</b><span>[Thành tích riêng, tiến bộ nổi bật]</span></div></div>
-      <div class="stu"><div class="av">Ảnh</div><div><b>[Tên học viên]</b><span>[Thành tích riêng, tiến bộ nổi bật]</span></div></div>
+      <div class="stu"><div class="av">Ảnh</div><div><b>Minh Khang</b><span>Tiến bộ nhanh, trở thành chủ lực đội thiếu niên sau 1 năm.</span></div></div>
+      <div class="stu"><div class="av">Ảnh</div><div><b>Gia Hân</b><span>Học viên nữ nổi bật với kỹ năng ném rổ ổn định.</span></div></div>
+      <div class="stu"><div class="av">Ảnh</div><div><b>Quốc Bảo</b><span>Bắt đầu từ lớp cơ bản, nay đã lên lớp nâng cao.</span></div></div>
     </div>
-    <div class="two"><div class="ph">[Ảnh nhận cúp / nhận huy chương 1]</div><div class="ph">[Ảnh nhận cúp / nhận huy chương 2]</div></div>
+    <div class="two"><img class="photo wide" src="img/team1.jpg" alt="Đội Two T sau trận đấu" width="394" height="172" loading="lazy"><img class="photo wide" src="img/team3.jpg" alt="Học viên nhí Two T trên sân" width="394" height="149" loading="lazy"></div>
   </div>
 </section>
 
@@ -284,16 +287,16 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
     <h2>Thư viện ảnh và video</h2>
     <p class="lead" style="margin-bottom:0">Không khí buổi tập, những trận đấu và khoảnh khắc của Two T.</p>
     <h3 class="cat">Buổi tập</h3>
-    <div class="grid4"><div class="ph">[Ảnh buổi tập 1]</div><div class="ph">[Ảnh buổi tập 2]</div><div class="ph">[Ảnh buổi tập 3]</div><div class="ph">[Ảnh buổi tập 4]</div></div>
+    <div class="grid4"><img class="photo" src="img/team2.jpg" alt="Buổi tập Two T 1" width="394" height="172" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Buổi tập Two T 2" width="394" height="172" loading="lazy"><img class="photo" src="img/team1.jpg" alt="Buổi tập Two T 3" width="394" height="172" loading="lazy"><img class="photo" src="img/team2.jpg" alt="Buổi tập Two T 4" width="394" height="172" loading="lazy"></div>
     <h3 class="cat">Giải đấu và giao hữu</h3>
-    <div class="grid4"><img class="photo" src="img/team2.jpg" alt="Đội Two T chụp ảnh trên sân thi đấu" width="394" height="179" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Các học viên nhí Two T cùng phụ huynh và huấn luyện viên" width="394" height="149" loading="lazy"><img class="photo" src="img/team1.jpg" alt="Đội Two T cùng huấn luyện viên" width="394" height="172" loading="lazy"><div class="ph">[Ảnh thi đấu 4]</div></div>
+    <div class="grid4"><img class="photo" src="img/team2.jpg" alt="Đội Two T chụp ảnh trên sân thi đấu" width="394" height="179" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Các học viên nhí Two T cùng phụ huynh và huấn luyện viên" width="394" height="149" loading="lazy"><img class="photo" src="img/team1.jpg" alt="Đội Two T cùng huấn luyện viên" width="394" height="172" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Học viên Two T chụp ảnh lưu niệm" width="394" height="149" loading="lazy"></div>
     <h3 class="cat">Clip highlight</h3>
     <div class="grid3">
-      <div class="ph"><div><div class="play">▶</div>[Video highlight 1]</div></div>
-      <div class="ph"><div><div class="play">▶</div>[Video highlight 2]</div></div>
-      <div class="ph"><div><div class="play">▶</div>[Video highlight 3]</div></div>
+      <a class="ph vid" href="#" style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(img/team1.jpg)"><div><div class="play">▶</div><span style="color:#fff;font-weight:600">Highlight 1</span></div></a>
+      <a class="ph vid" href="#" style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(img/team2.jpg)"><div><div class="play">▶</div><span style="color:#fff;font-weight:600">Highlight 2</span></div></a>
+      <a class="ph vid" href="#" style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(img/team3.jpg)"><div><div class="play">▶</div><span style="color:#fff;font-weight:600">Highlight 3</span></div></a>
     </div>
-    <a href="#" class="btn btn-k more">Xem thêm trên [Facebook / TikTok]</a>
+    <a href="https://www.facebook.com/profile.php?id=100091800505630" target="_blank" rel="noopener" class="btn btn-k more">Xem thêm trên Facebook / TikTok</a>
   </div>
 </section>
 
@@ -318,9 +321,9 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   <div class="wrap">
     <h2>Câu hỏi thường gặp</h2>
     <details><summary>Chưa biết chơi bóng rổ có học được không?</summary><p>Được. Các lớp có bài giảng cho người chưa từng chơi, lo cả trẻ em và người lớn.</p></details>
-    <details><summary>Buổi học thử có mất phí không?</summary><p>[Buổi học thử miễn phí / ưu đãi giảm giá tuần đầu theo chính sách CLB.]</p></details>
+    <details><summary>Buổi học thử có mất phí không?</summary><p>Buổi học thử đầu tiên miễn phí. Bạn chỉ cần đăng ký trước để huấn luyện viên sắp xếp chỗ.</p></details>
     <details><summary>Cần chuẩn bị gì khi đến tập?</summary><p>Giày thể thao, quần áo gọn nhẹ và chai nước. Bóng sẽ có sẵn tại sân.</p></details>
-    <details><summary>Học phí tính như thế nào?</summary><p>[Theo tháng hoặc theo khóa, có giảm giá đăng ký nhóm học anh chị em.]</p></details>
+    <details><summary>Học phí tính như thế nào?</summary><p>Học phí tính theo tháng. Có ưu đãi khi đăng ký theo quý hoặc đăng ký cho anh chị em cùng học.</p></details>
   </div>
 </section>
 
