@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Two T Basketball Club – Học bóng rổ cùng Two T</title>
 <meta name="description" content="Lớp học và sân chơi bóng rổ cho trẻ em lẫn người lớn tại Sân bóng Thới Tử. Đăng ký học thử ngay.">
+<link rel="icon" href="logo.jpg">
+<meta property="og:image" content="wearebasket.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -34,8 +36,9 @@ section{padding:96px 0}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:50;background:var(--black);border-bottom:1px solid #222}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:8px;font-family:var(--head);font-weight:800;font-size:1.4rem;color:var(--white)}
+.logo img{height:44px;width:auto;border-radius:6px}
 .logo i{width:24px;height:24px;border-radius:50%;background:var(--yellow);display:inline-block;position:relative}
 .logo i::after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(90deg,transparent 46%,var(--black) 46% 54%,transparent 54%)}
 .logo b{color:var(--yellow)}
@@ -45,16 +48,14 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:5
 .menu .btn:hover{color:var(--black)}
 
 /* HERO */
-.hero{background:radial-gradient(circle at 78% 40%,#0b3c52 0,transparent 45%),var(--black);padding:56px 0 0;overflow:hidden;position:relative}
-.hero::before{content:"";position:absolute;right:-6%;top:-10%;width:34%;height:130%;background:var(--yellow);transform:skewX(-14deg);opacity:.95;z-index:0}
+.hero{background:var(--black);overflow:hidden;position:relative}
+.hero-img{display:block;width:min(1200px,100%);height:auto;margin:0 auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .hero .wrap{position:relative;z-index:1}
-.hero-title{font-family:var(--head);font-weight:800;font-style:italic;text-transform:uppercase;line-height:.82;font-size:clamp(4rem,14vw,10.5rem);color:var(--yellow);display:block;position:relative;padding-top:20px}
-.hero-title .l2{color:var(--cyan);display:block;margin-top:-.02em;-webkit-text-stroke:2px var(--cyan)}
-.hero-title .no1{position:absolute;right:0;top:4%;font-size:.42em;color:var(--white);transform:rotate(-3deg);-webkit-text-stroke:0}
 .hero-info{display:flex;gap:56px;justify-content:center;padding:34px 0 40px;color:#eee;font-size:.95rem;flex-wrap:wrap}
 .hero-info span{display:flex;align-items:center;gap:10px}
 .hero-info em{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:6px;background:var(--yellow);color:var(--black);font-size:.8rem;font-weight:700}
-.hero-cta{background:var(--black);text-align:center;padding:80px 0 90px;position:relative;z-index:1}
+.hero-cta{background:var(--black);text-align:center;padding:56px 0 90px;position:relative;z-index:1}
 .hero-cta h2{color:var(--white);font-size:clamp(2.2rem,5vw,3.4rem)}
 .hero-cta h2 span{color:var(--yellow)}
 .hero-cta p{color:#c9c9c9;max-width:520px;margin:0 auto 30px;font-size:.95rem}
@@ -168,8 +169,6 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   .ach-cards,.students,.grid3{grid-template-columns:1fr}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
   .coach .ph{order:-1}
-  .hero::before{width:50%}
-  .hero-title .no1{position:static;display:block;transform:none;font-size:.4em;margin-bottom:8px}
 }
 @media(max-width:520px){.cards,.steps{grid-template-columns:1fr}table{font-size:.8rem}th,td{padding:10px}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
@@ -179,7 +178,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="logo"><i></i>TWO <b>T</b></a>
+    <a href="#top" class="logo" aria-label="Two T Basketball"><img src="logo.jpg" alt="Two T Basketball" width="44" height="49"><span>TWO <b>T</b></span></a>
     <div class="menu">
       <a href="#ve-clb">Về CLB</a><a href="#lop-hoc">Lớp học</a><a href="#thanh-tich">Thành tích</a><a href="#thu-vien">Thư viện</a><a href="#lich-tap">Lịch tập</a>
       <a href="#dang-ky" class="btn btn-y">Đăng ký học thử</a>
@@ -188,13 +187,8 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
-    <h1 class="hero-title">Two T<span class="no1">We're #1!</span><span class="l2">Basketball</span></h1>
-    <div class="hero-info">
-      <span><em>⌖</em> Sân bóng Thới Tử</span>
-      <span><em>✆</em> Liên hệ: 0385501560</span>
-    </div>
-  </div>
+  <h1 class="sr">Two T Basketball – We're #1! Sân bóng Thới Tử, liên hệ 0385501560</h1>
+  <img class="hero-img" src="wearebasket.jpg" alt="Two T Basketball – We're #1! Sân bóng Thới Tử – Liên hệ 0385501560" width="960" height="541" fetchpriority="high">
   <div class="hero-cta">
     <div class="wrap">
       <h2>Học bóng rổ cùng <span>Two T</span></h2>
@@ -350,7 +344,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 
 <footer>
   <div class="wrap">
-    <a href="#top" class="logo" style="font-size:1.1rem"><i style="width:18px;height:18px"></i>TWO <b>T</b></a>
+    <a href="#top" class="logo" style="font-size:1.1rem" aria-label="Two T Basketball"><img src="logo.jpg" alt="" width="32" height="35"><span>TWO <b>T</b></span></a>
     <span>© Two T Basketball Club</span>
   </div>
 </footer>
