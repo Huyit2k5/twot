@@ -2,6 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Two T Basketball Club – Học bóng rổ cùng Two T</title>
 <meta name="description" content="Khóa học bóng rổ cơ bản và nâng cao tại Sân vận động Thới Tứ. Đăng ký học thử ngay.">
@@ -176,8 +177,6 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 
 .float{position:fixed;right:0;top:62%;z-index:40;background:var(--yellow);color:var(--black);font-weight:700;font-size:.78rem;padding:12px 14px;border-radius:6px 0 0 6px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
 
-.reveal{opacity:0;transform:translateY(24px);transition:.7s}
-.reveal.in{opacity:1;transform:none}
 
 @media(max-width:900px){
   section{padding:64px 0}
@@ -190,7 +189,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   .coach-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:520px){.coach-grid{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr}table{font-size:.8rem}th,td{padding:10px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* ANIMATION */
 @keyframes heroIn{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
@@ -217,12 +216,16 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
 .step:hover b{transform:translateX(8px)}
 .ach-card,.coach-card,.card{will-change:transform}
 .ach-card{transition:.25s}.ach-card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.1)}
-.stagger>*{opacity:0;transform:translateY(28px);transition:opacity .6s,transform .6s}
-.stagger.in>*{opacity:1;transform:none}
-.stagger.in>*:nth-child(2){transition-delay:.12s}.stagger.in>*:nth-child(3){transition-delay:.24s}.stagger.in>*:nth-child(4){transition-delay:.36s}
-.stagger.in>.card:hover,.stagger.in>.coach-card:hover{transform:translateY(-6px);transition-delay:0s}
+.js .stagger>*{opacity:0;transform:translateY(48px) scale(.97);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .stagger.in>*{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(48px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.from-l{transform:translateX(-70px)}
+.js .rv.from-r{transform:translateX(70px)}
+.js .rv.in{opacity:1;transform:none}
+.stagger.in>*:nth-child(2){transition-delay:.15s}.stagger.in>*:nth-child(3){transition-delay:.3s}.stagger.in>*:nth-child(4){transition-delay:.45s}.stagger.in>*:nth-child(n+5){transition-delay:.55s}
+.js .stagger.in>.card:hover,.js .stagger.in>.coach-card:hover,.js .stagger.in>.ach-card:hover{transform:translateY(-6px);transition-delay:0s;transition-duration:.25s}
 .stats .wrap>*{transition:transform .3s}.stats .wrap>*:hover{transform:scale(1.08)}
-@media(prefers-reduced-motion:reduce){*{animation:none!important}.stagger>*{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.js .stagger>*,.js .rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -261,7 +264,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </div>
 
-<section class="about reveal" id="ve-clb">
+<section class="about" id="ve-clb">
   <div class="wrap">
     <img class="photo" src="img/team1.jpg" alt="Đội bóng rổ Two T cùng huấn luyện viên chụp ảnh chung" width="394" height="172" loading="lazy">
     <div>
@@ -272,7 +275,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="classes reveal" id="lop-hoc">
+<section class="classes" id="lop-hoc">
   <div class="wrap">
     <h2>Các lớp học</h2>
     <p class="lead">Hai khóa học đang chiêu sinh. Chưa chắc nên học khóa nào? Đăng ký học thử, huấn luyện viên sẽ tư vấn.</p>
@@ -283,7 +286,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="coach reveal" id="huan-luyen-vien">
+<section class="coach" id="huan-luyen-vien">
   <div class="wrap">
     <h2>Đội ngũ huấn luyện viên</h2>
     <p class="lead">Những người trực tiếp dẫn dắt từng buổi tập tại Two T.</p>
@@ -308,7 +311,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="ach reveal" id="thanh-tich">
+<section class="ach" id="thanh-tich">
   <div class="wrap">
     <h2>Thành tích và giải đấu</h2>
     <p class="lead">Những dấu mốc Two T đã cùng nhau đi qua trên sân bóng.</p>
@@ -327,7 +330,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="path reveal">
+<section class="path">
   <div class="wrap">
     <h2>Lộ trình tập luyện</h2>
     <div class="steps stagger">
@@ -339,7 +342,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="gallery reveal" id="thu-vien">
+<section class="gallery" id="thu-vien">
   <div class="wrap">
     <h2>Thư viện ảnh và video</h2>
     <p class="lead" style="margin-bottom:0">Không khí buổi tập, những trận đấu và khoảnh khắc của Two T.</p>
@@ -357,7 +360,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="schedule reveal" id="lich-tap">
+<section class="schedule" id="lich-tap">
   <div class="wrap">
     <h2>Lịch tập và địa điểm</h2>
     <p class="lead" style="margin-bottom:22px">Sân tập: <b>Sân vận động Thới Tứ</b><br>2/5A Trịnh Thị Miếng, Ấp Thới Tứ 1, Hóc Môn, Thành phố Hồ Chí Minh<br>Liên hệ: <a href="tel:0385501560"><b>0385 501 560</b></a></p>
@@ -378,7 +381,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="faq reveal">
+<section class="faq">
   <div class="wrap">
     <h2>Câu hỏi thường gặp</h2>
     <details><summary>Chưa biết chơi bóng rổ có học được không?</summary><p>Được. Các lớp có bài giảng cho người chưa từng chơi, lo cả trẻ em và người lớn.</p></details>
@@ -388,7 +391,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   </div>
 </section>
 
-<section class="signup reveal" id="dang-ky">
+<section class="signup" id="dang-ky">
   <div class="wrap">
     <div>
       <h2>Đăng ký học thử</h2>
@@ -427,8 +430,16 @@ f.addEventListener('submit',e=>{
   document.getElementById('ok').style.display='block';
   f.reset();
 });
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
-document.querySelectorAll('.reveal,.stagger').forEach(el=>io.observe(el));
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('section:not(.hero) > .wrap').forEach(w=>{
+  const cols=w.matches('.about .wrap,.signup .wrap');
+  [...w.children].forEach((c,i)=>{
+    if(c.classList.contains('stagger')||c.matches('.cards,.coach-grid,.ach-cards,.steps,.students,.grid4,.grid3,.two')){c.classList.add('stagger');io.observe(c);return}
+    if(cols){c.classList.add('rv',i%2?'from-r':'from-l');io.observe(c);return}
+    c.classList.add('rv');io.observe(c);
+  });
+});
+document.querySelectorAll('.stats .wrap > div').forEach(c=>{c.classList.add('rv');io.observe(c)});
 const nav=document.querySelector('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
