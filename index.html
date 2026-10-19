@@ -94,9 +94,16 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .card.dark small{color:var(--yellow)}
 
 /* COACH */
-.coach .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.coach .ph{aspect-ratio:1/.9;min-height:300px}
-.coach p{margin-bottom:14px;color:#333}
+.coach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.coach-card{background:var(--paper);overflow:hidden;transition:.25s}
+.coach-card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.coach-ph{aspect-ratio:4/5;border-radius:0;font-size:.75rem}
+.coach-body{padding:18px;border-top:4px solid var(--yellow)}
+.coach-body h3{font-size:1.4rem;margin-bottom:4px}
+.coach-body small{color:var(--cyan);font-weight:700;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}
+.coach-body p{font-size:.82rem;color:#444;margin:10px 0 12px}
+.coach-body ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.coach-body li{font-size:.68rem;font-weight:600;background:var(--black);color:var(--yellow);padding:3px 8px;border-radius:20px}
 
 /* ACHIEVEMENTS */
 .ach{background:var(--paper)}
@@ -173,12 +180,12 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   .menu a:not(.btn){display:none}
   .cards,.steps,.grid4{grid-template-columns:repeat(2,1fr)}
   .cards.two-col{grid-template-columns:1fr}
-  .about .wrap,.coach .wrap,.signup .wrap,.two{grid-template-columns:1fr;gap:32px}
+  .about .wrap,.signup .wrap,.two{grid-template-columns:1fr;gap:32px}
   .ach-cards,.students,.grid3{grid-template-columns:1fr}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
-  .coach .ph{order:-1}
+  .coach-grid{grid-template-columns:repeat(2,1fr)}
 }
-@media(max-width:520px){.cards,.steps{grid-template-columns:1fr}table{font-size:.8rem}th,td{padding:10px}}
+@media(max-width:520px){.coach-grid{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr}table{font-size:.8rem}th,td{padding:10px}}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -188,7 +195,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   <div class="wrap">
     <a href="#top" class="logo" aria-label="Two T Basketball"><img src="logo.jpg" alt="Two T Basketball" width="44" height="49"><span>TWO <b>T</b></span></a>
     <div class="menu">
-      <a href="#ve-clb">Về CLB</a><a href="#lop-hoc">Lớp học</a><a href="#thanh-tich">Thành tích</a><a href="#thu-vien">Thư viện</a><a href="#lich-tap">Lịch tập</a>
+      <a href="#ve-clb">Về CLB</a><a href="#lop-hoc">Lớp học</a><a href="#huan-luyen-vien">HLV</a><a href="#thanh-tich">Thành tích</a><a href="#thu-vien">Thư viện</a><a href="#lich-tap">Lịch tập</a>
       <a href="#dang-ky" class="btn btn-y">Đăng ký học thử</a>
     </div>
   </div>
@@ -240,14 +247,28 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   </div>
 </section>
 
-<section class="coach reveal">
+<section class="coach reveal" id="huan-luyen-vien">
   <div class="wrap">
-    <div>
-      <h2>Huấn luyện viên</h2>
-      <p><b>Huấn luyện viên Nguyễn Văn A</b>, người sáng lập và dẫn dắt các lớp tại Two T.</p>
-      <p style="color:var(--muted)">Hơn 8 năm thi đấu và giảng dạy bóng rổ phong trào, có chứng chỉ huấn luyện cơ bản, từng dẫn dắt nhiều đội tham gia giải trong khu vực.</p>
+    <h2>Đội ngũ huấn luyện viên</h2>
+    <p class="lead">Những người trực tiếp dẫn dắt từng buổi tập tại Two T.</p>
+    <div class="coach-grid">
+      <article class="coach-card">
+        <div class="ph coach-ph">[Ảnh HLV]</div>
+        <div class="coach-body"><h3>Nguyễn Văn A</h3><small>Huấn luyện viên trưởng · Nâng cao</small><p>Hơn 8 năm thi đấu và giảng dạy, có chứng chỉ huấn luyện, người sáng lập Two T.</p><ul><li>8 năm kinh nghiệm</li><li>Chiến thuật</li></ul></div>
+      </article>
+      <article class="coach-card">
+        <div class="ph coach-ph">[Ảnh HLV]</div>
+        <div class="coach-body"><h3>Trần Minh B</h3><small>Huấn luyện viên · Cơ bản</small><p>Chuyên dạy người mới bắt đầu, kiên nhẫn và giàu năng lượng.</p><ul><li>5 năm kinh nghiệm</li><li>Kỹ thuật cơ bản</li></ul></div>
+      </article>
+      <article class="coach-card">
+        <div class="ph coach-ph">[Ảnh HLV]</div>
+        <div class="coach-body"><h3>Lê Quốc C</h3><small>Huấn luyện viên · Thể lực</small><p>Phụ trách khởi động, thể lực và phòng tránh chấn thương cho học viên.</p><ul><li>Thể lực</li><li>Thi đấu giải phong trào</li></ul></div>
+      </article>
+      <article class="coach-card">
+        <div class="ph coach-ph">[Ảnh HLV]</div>
+        <div class="coach-body"><h3>Phạm Thu D</h3><small>Trợ giảng · Lớp thiếu nhi</small><p>Đồng hành cùng các bạn nhỏ, tạo không khí vui vẻ trong mỗi buổi tập.</p><ul><li>Thiếu nhi</li><li>Trợ giảng</li></ul></div>
+      </article>
     </div>
-    <img class="photo" src="img/team2.jpg" alt="Huấn luyện viên và học viên Two T" width="394" height="179" loading="lazy">
   </div>
 </section>
 
