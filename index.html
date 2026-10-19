@@ -147,6 +147,8 @@ table{width:100%;border-collapse:collapse;background:var(--white);font-size:.9re
 th{background:var(--black);color:var(--white);text-align:left;padding:12px 18px;font-size:.8rem}
 td{padding:12px 18px;border-bottom:1px solid #e8e8e2;color:#444}
 
+.map{margin-top:28px;border-radius:4px;overflow:hidden;background:var(--ph)}
+.map iframe{display:block;width:100%;height:380px;border:0}
 /* FAQ */
 .faq .wrap{max-width:760px}
 details{border-bottom:1px solid #e3e3dd;padding:16px 0}
@@ -326,7 +328,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 <section class="schedule reveal" id="lich-tap">
   <div class="wrap">
     <h2>Lịch tập và địa điểm</h2>
-    <p class="lead" style="margin-bottom:22px">Sân tập: <b>Sân vận động Thới Tứ</b> · Liên hệ: <a href="tel:0385501560"><b>0385 501 560</b></a></p>
+    <p class="lead" style="margin-bottom:22px">Sân tập: <b>Sân vận động Thới Tứ</b><br>2/5A Trịnh Thị Miếng, Ấp Thới Tứ 1, Hóc Môn, Thành phố Hồ Chí Minh<br>Liên hệ: <a href="tel:0385501560"><b>0385 501 560</b></a></p>
     <div style="overflow-x:auto">
     <table>
       <thead><tr><th>Ngày</th><th>Giờ</th><th>Lớp</th></tr></thead>
@@ -337,6 +339,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
       </tbody>
     </table>
     </div>
+    <div class="map">
+      <iframe title="Bản đồ Sân vận động Thới Tứ" src="https://www.google.com/maps?q=2/5A%20Tr%E1%BB%8Bnh%20Th%E1%BB%8B%20Mi%E1%BA%BFng%2C%20%E1%BA%A4p%20Th%E1%BB%9Bi%20T%E1%BB%A9%201%2C%20H%C3%B3c%20M%C3%B4n%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <a class="btn btn-k" style="margin-top:16px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=2/5A%20Tr%E1%BB%8Bnh%20Th%E1%BB%8B%20Mi%E1%BA%BFng%2C%20%E1%BA%A4p%20Th%E1%BB%9Bi%20T%E1%BB%A9%201%2C%20H%C3%B3c%20M%C3%B4n%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh">Chỉ đường bằng Google Maps</a>
   </div>
 </section>
 
@@ -356,7 +362,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
       <h2>Đăng ký học thử</h2>
       <p>Để lại thông tin, Two T sẽ liên hệ xếp lịch buổi học thử phù hợp với bạn hoặc con bạn.</p>
       <p><b>Liên hệ:</b> 0385 501 560</p>
-      <p><b>Địa chỉ:</b> Sân vận động Thới Tứ</p>
+      <p><b>Địa chỉ:</b> Sân vận động Thới Tứ, 2/5A Trịnh Thị Miếng, Ấp Thới Tứ 1, Hóc Môn, Thành phố Hồ Chí Minh</p>
     </div>
     <form id="f" novalidate>
       <label>Họ và tên<input name="name" required autocomplete="name"></label>
