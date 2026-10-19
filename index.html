@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Two T Basketball Club – Học bóng rổ cùng Two T</title>
-<meta name="description" content="Lớp học và sân chơi bóng rổ cho trẻ em lẫn người lớn tại Sân bóng Thới Tử. Đăng ký học thử ngay.">
+<meta name="description" content="Khóa học bóng rổ cơ bản và nâng cao tại Sân vận động Thới Tứ. Đăng ký học thử ngay.">
 <link rel="icon" href="logo.jpg">
 <meta property="og:image" content="wearebasket.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +69,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 
 /* ABOUT */
 .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.about .ph{aspect-ratio:1/.8;min-height:300px}
+.photo{width:100%;height:auto;border-radius:4px;display:block;object-fit:cover}
+.about .photo{box-shadow:12px 12px 0 var(--yellow)}
+.grid4 .photo{aspect-ratio:1/1.05;transition:.25s}
+.grid4 .photo:hover{transform:scale(1.03)}
+.cards.two-col{grid-template-columns:repeat(2,1fr);max-width:860px}
 .about p{margin-bottom:14px;color:#333}
 .about .tag{color:var(--muted);font-size:.9rem}
 
@@ -165,6 +169,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   section{padding:64px 0}
   .menu a:not(.btn){display:none}
   .cards,.steps,.grid4{grid-template-columns:repeat(2,1fr)}
+  .cards.two-col{grid-template-columns:1fr}
   .about .wrap,.coach .wrap,.signup .wrap,.two{grid-template-columns:1fr;gap:32px}
   .ach-cards,.students,.grid3{grid-template-columns:1fr}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
@@ -187,12 +192,12 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 </nav>
 
 <header class="hero" id="top">
-  <h1 class="sr">Two T Basketball – We're #1! Sân bóng Thới Tử, liên hệ 0385501560</h1>
-  <img class="hero-img" src="wearebasket.jpg" alt="Two T Basketball – We're #1! Sân bóng Thới Tử – Liên hệ 0385501560" width="960" height="541" fetchpriority="high">
+  <h1 class="sr">Two T Basketball – We're #1! Sân bóng Thới Tứ, liên hệ 0385501560</h1>
+  <img class="hero-img" src="wearebasket.jpg" alt="Two T Basketball – We're #1! Sân bóng Thới Tứ – Liên hệ 0385501560" width="960" height="541" fetchpriority="high">
   <div class="hero-cta">
     <div class="wrap">
       <h2>Học bóng rổ cùng <span>Two T</span></h2>
-      <p>Lớp học và sân chơi bóng rổ cho trẻ em lẫn người lớn tại Sân bóng Thới Tử. Từ lần đầu cầm bóng đến thi đấu giao hữu cùng đồng đội.</p>
+      <p>Đang chiêu sinh khóa học bóng rổ cơ bản và nâng cao tại Sân vận động Thới Tứ. Từ lần đầu cầm bóng đến thi đấu giao hữu cùng đồng đội.</p>
       <div class="btns">
         <a href="#dang-ky" class="btn btn-y">Đăng ký học thử</a>
         <a href="tel:0385501560" class="btn btn-o">Gọi 0385 501 560</a>
@@ -212,7 +217,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 
 <section class="about reveal" id="ve-clb">
   <div class="wrap">
-    <div class="ph">[Ảnh đội Two T hoặc nhóm chung]</div>
+    <img class="photo" src="img/team1.jpg" alt="Đội bóng rổ Two T cùng huấn luyện viên chụp ảnh chung" width="394" height="172" loading="lazy">
     <div>
       <h2>Về Two T</h2>
       <p class="tag">[Câu chuyện thành lập CLB: ai lập, vì sao, bắt đầu từ đâu.]</p>
@@ -224,12 +229,10 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 <section class="classes reveal" id="lop-hoc">
   <div class="wrap">
     <h2>Các lớp học</h2>
-    <p class="lead">Chọn lớp phù hợp với độ tuổi và trình độ. Chưa chắc nên học lớp nào? Đăng ký học thử, huấn luyện viên sẽ tư vấn.</p>
-    <div class="cards">
-      <article class="card"><small>THIẾU NHI</small><h3>Lớp làm quen</h3><p>Độ tuổi [X–X]. Làm quen bóng, phát triển thể chất, học qua trò chơi.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
-      <article class="card"><small>THIẾU NIÊN</small><h3>Lớp kỹ thuật</h3><p>Độ tuổi [X–X]. Rê bóng, ném rổ, di chuyển chân, tập thi đấu đội.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
-      <article class="card"><small>NGƯỜI LỚN</small><h3>Lớp cơ bản và rèn thể lực</h3><p>Dành cho người mới hoặc chơi lại bóng rổ, kết hợp thể lực.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
-      <article class="card dark"><small>NÂNG CAO</small><h3>Chiến thuật và thi đấu</h3><p>Phối hợp đội, phòng thủ, tấn công theo hệ thống, giao hữu cùng các CLB khác.</p><div class="meta">Lịch: [Thứ X, X] · Học phí: [XXX.000đ/tháng]</div></article>
+    <p class="lead">Hai khóa học đang chiêu sinh. Chưa chắc nên học khóa nào? Đăng ký học thử, huấn luyện viên sẽ tư vấn.</p>
+    <div class="cards two-col">
+      <article class="card"><small>CƠ BẢN</small><h3>Khóa bóng rổ cơ bản</h3><p>Làm quen bóng, tư thế, rê bóng, chuyền, ném rổ và luật chơi. Phù hợp cho người mới bắt đầu.</p><div class="meta"><b>Lịch:</b> Thứ 2-4-6 hoặc Thứ 3-5-7 · 17h30 – 19h00<br>Học phí: [XXX.000đ/tháng]</div></article>
+      <article class="card dark"><small>NÂNG CAO</small><h3>Khóa bóng rổ nâng cao</h3><p>Hoàn thiện kỹ thuật, phối hợp đội, phòng thủ, tấn công theo hệ thống và thi đấu giao hữu.</p><div class="meta"><b>Lịch:</b> Thứ 3-5-7 · 19h30 – 21h00<br>Học phí: [XXX.000đ/tháng]</div></article>
     </div>
   </div>
 </section>
@@ -283,7 +286,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
     <h3 class="cat">Buổi tập</h3>
     <div class="grid4"><div class="ph">[Ảnh buổi tập 1]</div><div class="ph">[Ảnh buổi tập 2]</div><div class="ph">[Ảnh buổi tập 3]</div><div class="ph">[Ảnh buổi tập 4]</div></div>
     <h3 class="cat">Giải đấu và giao hữu</h3>
-    <div class="grid4"><div class="ph">[Ảnh thi đấu 1]</div><div class="ph">[Ảnh thi đấu 2]</div><div class="ph">[Ảnh thi đấu 3]</div><div class="ph">[Ảnh thi đấu 4]</div></div>
+    <div class="grid4"><img class="photo" src="img/team2.jpg" alt="Đội Two T chụp ảnh trên sân thi đấu" width="394" height="179" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Các học viên nhí Two T cùng phụ huynh và huấn luyện viên" width="394" height="149" loading="lazy"><img class="photo" src="img/team1.jpg" alt="Đội Two T cùng huấn luyện viên" width="394" height="172" loading="lazy"><div class="ph">[Ảnh thi đấu 4]</div></div>
     <h3 class="cat">Clip highlight</h3>
     <div class="grid3">
       <div class="ph"><div><div class="play">▶</div>[Video highlight 1]</div></div>
@@ -297,14 +300,14 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
 <section class="schedule reveal" id="lich-tap">
   <div class="wrap">
     <h2>Lịch tập và địa điểm</h2>
-    <p class="lead" style="margin-bottom:22px">Sân tập: <b>Sân bóng Thới Tử</b> [địa chỉ chi tiết]</p>
+    <p class="lead" style="margin-bottom:22px">Sân tập: <b>Sân vận động Thới Tứ</b> · Liên hệ: <a href="tel:0385501560"><b>0385 501 560</b></a></p>
     <div style="overflow-x:auto">
     <table>
       <thead><tr><th>Ngày</th><th>Giờ</th><th>Lớp</th></tr></thead>
       <tbody>
-        <tr><td>[Thứ X]</td><td>[XX:XX – XX:XX]</td><td>[Thiếu nhi]</td></tr>
-        <tr><td>[Thứ X]</td><td>[XX:XX – XX:XX]</td><td>[Thiếu niên]</td></tr>
-        <tr><td>[Thứ X]</td><td>[XX:XX – XX:XX]</td><td>[Người lớn]</td></tr>
+        <tr><td>Thứ 2 – 4 – 6</td><td>17h30 – 19h00</td><td>Cơ bản</td></tr>
+        <tr><td>Thứ 3 – 5 – 7</td><td>17h30 – 19h00</td><td>Cơ bản</td></tr>
+        <tr><td>Thứ 3 – 5 – 7</td><td>19h30 – 21h00</td><td>Nâng cao</td></tr>
       </tbody>
     </table>
     </div>
@@ -327,14 +330,14 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
       <h2>Đăng ký học thử</h2>
       <p>Để lại thông tin, Two T sẽ liên hệ xếp lịch buổi học thử phù hợp với bạn hoặc con bạn.</p>
       <p><b>Liên hệ:</b> 0385 501 560</p>
-      <p><b>Địa chỉ:</b> Sân bóng Thới Tử</p>
+      <p><b>Địa chỉ:</b> Sân vận động Thới Tứ</p>
     </div>
     <form id="f" novalidate>
       <label>Họ và tên<input name="name" required autocomplete="name"></label>
       <label>Số điện thoại<input name="phone" type="tel" required pattern="[0-9 +]{9,13}" autocomplete="tel"></label>
       <label>Tuổi người học<input name="age" type="number" min="3" max="80"></label>
       <label>Lớp quan tâm
-        <select name="cls"><option>Thiếu nhi</option><option>Thiếu niên</option><option>Người lớn</option><option>Nâng cao</option></select>
+        <select name="cls"><option>Cơ bản</option><option>Nâng cao</option><option>Chưa biết, cần tư vấn</option></select>
       </label>
       <button class="btn btn-k" type="submit">Gửi đăng ký</button>
       <p class="ok" id="ok">Cảm ơn bạn! Two T sẽ liên hệ sớm.</p>
