@@ -70,6 +70,39 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 
 /* ABOUT */
 .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.courses{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.course{min-width:0;position:relative;background:var(--white);padding:40px 38px 34px;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 0 rgba(0,0,0,.04),0 18px 40px -22px rgba(0,0,0,.25);border-top:6px solid var(--yellow)}
+.course::after{content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;border-radius:50%;background:var(--yellow);opacity:.14}
+.course .num{position:absolute;right:30px;top:14px;font-family:var(--head);font-weight:800;font-size:6.5rem;line-height:1;color:var(--black);opacity:.07}
+.course .level{align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.14em;background:var(--black);color:var(--yellow);padding:5px 12px;border-radius:20px}
+.course h3{font-size:2.2rem;margin:18px 0 10px;position:relative}
+.course .desc{font-size:.98rem;color:#333;margin-bottom:6px;position:relative}
+.course .target{font-size:.85rem;font-weight:600;color:var(--cyan);margin-bottom:20px}
+.feats{list-style:none;display:grid;gap:10px;margin-bottom:26px;font-size:.92rem}
+.feats li{display:flex;gap:10px;align-items:center}
+.feats li::before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--yellow);color:var(--black);font-size:.72rem;font-weight:800}
+.sched{background:var(--paper);border-radius:6px;padding:16px 18px;display:grid;gap:10px;margin-bottom:26px}
+.sched b{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sch-row{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:.95rem}
+.sch-row .days{font-weight:700}
+.sch-row .time{font-weight:600;background:var(--white);padding:4px 12px;border-radius:20px;box-shadow:inset 0 0 0 1.5px var(--black);white-space:nowrap}
+.course .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:22px;border-top:1px dashed #d4d4cc}
+.price strong{font-family:var(--head);font-size:2.6rem;font-weight:800;line-height:1}
+.price span{font-size:.85rem;color:var(--muted);margin-left:4px}
+.course.dark{background:var(--black);color:var(--white);border-top-color:var(--cyan)}
+.course.dark::after{background:var(--cyan);opacity:.18}
+.course.dark .num{color:var(--white);opacity:.08}
+.course.dark .level{background:var(--yellow);color:var(--black)}
+.course.dark .desc{color:#d6d6d6}
+.course.dark .target{color:var(--yellow)}
+.course.dark .feats li::before{background:var(--cyan)}
+.course.dark .sched{background:#1b1b1b}
+.course.dark .sched b,.course.dark .price span{color:#9a9a9a}
+.course.dark .sch-row .time{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px var(--yellow)}
+.course.dark .foot{border-top-color:#333}
+.course{transition:transform .25s,box-shadow .25s}
+.course:hover{transform:translateY(-6px);box-shadow:0 26px 50px -22px rgba(0,0,0,.4)}
+@media(max-width:520px){.course{padding:32px 22px 26px}.course h3{font-size:1.8rem}.sch-row{flex-direction:column;align-items:flex-start;gap:6px}}
 .photo{width:100%;height:auto;border-radius:4px;display:block;object-fit:cover}
 .about .photo{box-shadow:12px 12px 0 var(--yellow)}
 .grid4 .photo{aspect-ratio:1/1.05;transition:.25s}
@@ -77,28 +110,18 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .coach .photo{box-shadow:-12px 12px 0 var(--cyan)}
 .vid{background-size:cover;background-position:center;color:#fff}
 .grid4 .photo:hover{transform:scale(1.03)}
-.cards.two-col{grid-template-columns:repeat(2,1fr);max-width:860px}
 .about p{margin-bottom:14px;color:#333}
 .about .tag{color:var(--muted);font-size:.9rem}
 
 /* CLASSES */
 .classes{background:var(--paper)}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{background:var(--white);border-top:4px solid var(--yellow);padding:26px 22px;transition:.25s}
-.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.1)}
-.card small{color:var(--cyan);font-weight:700;letter-spacing:.12em;font-size:.68rem}
-.card h3{font-size:1.5rem;margin:8px 0 10px}
-.card p{font-size:.84rem;color:#444;margin-bottom:12px}
-.card .meta{font-size:.74rem;color:var(--muted)}
-.card.dark{background:var(--black);color:var(--white);border-top-color:var(--cyan)}
-.card.dark p,.card.dark .meta{color:#ccc}
-.card.dark small{color:var(--yellow)}
 
 /* COACH */
 .coach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .coach-card{background:var(--paper);overflow:hidden;transition:.25s;display:flex;flex-direction:column}
 .coach-card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
-.coach-ph{aspect-ratio:4/5;border-radius:0;font-size:.75rem;position:relative;overflow:hidden;background:linear-gradient(160deg,#ececE6,#d9d9d1);color:transparent}
+.coach-ph{width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:4/5;border-radius:0;font-size:.75rem;position:relative;overflow:hidden;background:linear-gradient(160deg,#ececE6,#d9d9d1);color:transparent}
 .coach-ph::before{content:"";position:absolute;left:50%;top:26%;width:34%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:#b9b9b0}
 .coach-ph::after{content:"";position:absolute;left:50%;top:62%;width:70%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:#b9b9b0}
 .coach-body{padding:18px;border-top:4px solid var(--yellow);flex:1;display:flex;flex-direction:column}
@@ -182,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-
   section{padding:64px 0}
   .menu a:not(.btn){display:none}
   .cards,.steps,.grid4{grid-template-columns:repeat(2,1fr)}
-  .cards.two-col{grid-template-columns:1fr}
+  .courses{grid-template-columns:minmax(0,1fr)}
   .about .wrap,.signup .wrap,.two{grid-template-columns:1fr;gap:32px}
   .ach-cards,.students,.grid3{grid-template-columns:1fr}
   .stats .wrap{grid-template-columns:repeat(2,1fr)}
@@ -223,7 +246,7 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
 .js .rv.from-r{transform:translateX(70px)}
 .js .rv.in{opacity:1;transform:none}
 .stagger.in>*:nth-child(2){transition-delay:.15s}.stagger.in>*:nth-child(3){transition-delay:.3s}.stagger.in>*:nth-child(4){transition-delay:.45s}.stagger.in>*:nth-child(n+5){transition-delay:.55s}
-.js .stagger.in>.card:hover,.js .stagger.in>.coach-card:hover,.js .stagger.in>.ach-card:hover{transform:translateY(-6px);transition-delay:0s;transition-duration:.25s}
+.js .stagger.in>.course:hover,.js .stagger.in>.coach-card:hover,.js .stagger.in>.ach-card:hover{transform:translateY(-6px);transition-delay:0s;transition-duration:.25s}
 .stats .wrap>*{transition:transform .3s}.stats .wrap>*:hover{transform:scale(1.08)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.js .stagger>*,.js .rv{opacity:1;transform:none;transition:none}}
 </style>
@@ -279,9 +302,33 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   <div class="wrap">
     <h2>Các lớp học</h2>
     <p class="lead">Hai khóa học đang chiêu sinh. Chưa chắc nên học khóa nào? Đăng ký học thử, huấn luyện viên sẽ tư vấn.</p>
-    <div class="cards two-col stagger">
-      <article class="card"><small>CƠ BẢN</small><h3>Khóa bóng rổ cơ bản</h3><p>Làm quen bóng, tư thế, rê bóng, chuyền, ném rổ và luật chơi. Phù hợp cho người mới bắt đầu.</p><div class="meta"><b>Lịch:</b> Thứ 2-4-6 hoặc Thứ 3-5-7 · 17h30 – 19h00<br>Học phí: 500.000đ/tháng</div></article>
-      <article class="card dark"><small>NÂNG CAO</small><h3>Khóa bóng rổ nâng cao</h3><p>Hoàn thiện kỹ thuật, phối hợp đội, phòng thủ, tấn công theo hệ thống và thi đấu giao hữu.</p><div class="meta"><b>Lịch:</b> Thứ 3-5-7 · 19h30 – 21h00<br>Học phí: 600.000đ/tháng</div></article>
+    <div class="courses stagger">
+      <article class="course">
+        <span class="num" aria-hidden="true">01</span>
+        <span class="level">CƠ BẢN</span>
+        <h3>Khóa bóng rổ cơ bản</h3>
+        <p class="desc">Làm quen bóng, tư thế, rê bóng, chuyền, ném rổ và luật chơi.</p>
+        <p class="target">Dành cho người mới bắt đầu</p>
+        <ul class="feats"><li>Kỹ thuật nền tảng từng bước</li><li>Khởi động và thể lực cơ bản</li><li>Chơi trò chơi vận động vui vẻ</li></ul>
+        <div class="sched"><b>Lịch học</b><div class="sch-row"><span class="days">Thứ 2 · 4 · 6</span><span class="time">17h30 – 19h00</span></div><div class="sch-row"><span class="days">Thứ 3 · 5 · 7</span><span class="time">17h30 – 19h00</span></div></div>
+        <div class="foot">
+          <div class="price"><strong>500.000đ</strong><span>/tháng</span></div>
+          <a href="#dang-ky" class="btn btn-k">Đăng ký học thử</a>
+        </div>
+      </article>
+      <article class="course dark">
+        <span class="num" aria-hidden="true">02</span>
+        <span class="level">NÂNG CAO</span>
+        <h3>Khóa bóng rổ nâng cao</h3>
+        <p class="desc">Hoàn thiện kỹ thuật, phối hợp đội, phòng thủ và tấn công theo hệ thống.</p>
+        <p class="target">Dành cho người đã có nền tảng</p>
+        <ul class="feats"><li>Chiến thuật đội và phối hợp</li><li>Thi đấu nội bộ và giao hữu</li><li>Rèn thể lực, tốc độ, bật nhảy</li></ul>
+        <div class="sched"><b>Lịch học</b><div class="sch-row"><span class="days">Thứ 3 · 5 · 7</span><span class="time">19h30 – 21h00</span></div></div>
+        <div class="foot">
+          <div class="price"><strong>600.000đ</strong><span>/tháng</span></div>
+          <a href="#dang-ky" class="btn btn-y">Đăng ký học thử</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -292,19 +339,19 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
     <p class="lead">Những người trực tiếp dẫn dắt từng buổi tập tại Two T.</p>
     <div class="coach-grid stagger">
       <article class="coach-card">
-        <div class="ph coach-ph" role="img" aria-label="Ảnh huấn luyện viên (sẽ cập nhật)"></div>
+        <img class="coach-ph" src="img/coach1.svg" alt="Huấn luyện viên Nguyễn Văn A (ảnh minh họa)" width="400" height="500" loading="lazy">
         <div class="coach-body"><h3>Nguyễn Văn A</h3><small>Huấn luyện viên trưởng · Nâng cao</small><p>Hơn 8 năm thi đấu và giảng dạy, có chứng chỉ huấn luyện, người sáng lập Two T.</p><ul><li>8 năm kinh nghiệm</li><li>Chiến thuật</li></ul></div>
       </article>
       <article class="coach-card">
-        <div class="ph coach-ph" role="img" aria-label="Ảnh huấn luyện viên (sẽ cập nhật)"></div>
+        <img class="coach-ph" src="img/coach2.svg" alt="Huấn luyện viên Trần Minh B (ảnh minh họa)" width="400" height="500" loading="lazy">
         <div class="coach-body"><h3>Trần Minh B</h3><small>Huấn luyện viên · Cơ bản</small><p>Chuyên dạy người mới bắt đầu, kiên nhẫn và giàu năng lượng.</p><ul><li>5 năm kinh nghiệm</li><li>Kỹ thuật cơ bản</li></ul></div>
       </article>
       <article class="coach-card">
-        <div class="ph coach-ph" role="img" aria-label="Ảnh huấn luyện viên (sẽ cập nhật)"></div>
+        <img class="coach-ph" src="img/coach3.svg" alt="Huấn luyện viên Lê Quốc C (ảnh minh họa)" width="400" height="500" loading="lazy">
         <div class="coach-body"><h3>Lê Quốc C</h3><small>Huấn luyện viên · Thể lực</small><p>Phụ trách khởi động, thể lực và phòng tránh chấn thương cho học viên.</p><ul><li>Thể lực</li><li>Thi đấu giải phong trào</li></ul></div>
       </article>
       <article class="coach-card">
-        <div class="ph coach-ph" role="img" aria-label="Ảnh huấn luyện viên (sẽ cập nhật)"></div>
+        <img class="coach-ph" src="img/coach4.svg" alt="Trợ giảng Phạm Thu D (ảnh minh họa)" width="400" height="500" loading="lazy">
         <div class="coach-body"><h3>Phạm Thu D</h3><small>Trợ giảng · Lớp thiếu nhi</small><p>Đồng hành cùng các bạn nhỏ, tạo không khí vui vẻ trong mỗi buổi tập.</p><ul><li>Thiếu nhi</li><li>Trợ giảng</li></ul></div>
       </article>
     </div>
@@ -434,7 +481,7 @@ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.targ
 document.querySelectorAll('section:not(.hero) > .wrap').forEach(w=>{
   const cols=w.matches('.about .wrap,.signup .wrap');
   [...w.children].forEach((c,i)=>{
-    if(c.classList.contains('stagger')||c.matches('.cards,.coach-grid,.ach-cards,.steps,.students,.grid4,.grid3,.two')){c.classList.add('stagger');io.observe(c);return}
+    if(c.classList.contains('stagger')||c.matches('.courses,.cards,.coach-grid,.ach-cards,.steps,.students,.grid4,.grid3,.two')){c.classList.add('stagger');io.observe(c);return}
     if(cols){c.classList.add('rv',i%2?'from-r':'from-l');io.observe(c);return}
     c.classList.add('rv');io.observe(c);
   });
