@@ -49,14 +49,14 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .menu .btn:hover{color:var(--black)}
 
 /* HERO */
-.hero{background:var(--black);overflow:hidden;position:relative}
-.hero-img{display:block;width:min(1200px,100%);height:auto;margin:0 auto}
+.hero{background:#171115;overflow:hidden;position:relative}
+.hero-img{display:block;width:min(1000px,100%);height:auto;margin:0 auto;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .hero .wrap{position:relative;z-index:1}
 .hero-info{display:flex;gap:56px;justify-content:center;padding:34px 0 40px;color:#eee;font-size:.95rem;flex-wrap:wrap}
 .hero-info span{display:flex;align-items:center;gap:10px}
 .hero-info em{font-style:normal;display:grid;place-items:center;width:26px;height:26px;border-radius:6px;background:var(--yellow);color:var(--black);font-size:.8rem;font-weight:700}
-.hero-cta{background:var(--black);text-align:center;padding:56px 0 90px;position:relative;z-index:1}
+.hero-cta{background:linear-gradient(#171115,var(--black) 160px);text-align:center;padding:56px 0 90px;position:relative;z-index:1}
 .hero-cta h2{color:var(--white);font-size:clamp(2.2rem,5vw,3.4rem)}
 .hero-cta h2 span{color:var(--yellow)}
 .hero-cta p{color:#c9c9c9;max-width:520px;margin:0 auto 30px;font-size:.95rem}
@@ -249,6 +249,71 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
 .js .stagger.in>.course:hover,.js .stagger.in>.coach-card:hover,.js .stagger.in>.ach-card:hover{transform:translateY(-6px);transition-delay:0s;transition-duration:.25s}
 .stats .wrap>*{transition:transform .3s}.stats .wrap>*:hover{transform:scale(1.08)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.js .stagger>*,.js .rv{opacity:1;transform:none;transition:none}}
+
+/* REVIEW POLISH */
+:root{--cyan-d:#0b7fb5}
+.eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan-d);margin-bottom:10px;position:relative;padding-left:34px}
+.eyebrow::before{content:"";position:absolute;left:0;top:50%;width:24px;height:3px;background:var(--yellow);transform:translateY(-50%)}
+.coach-body small,.ach-card small,.course .target,.gallery h3.cat{color:var(--cyan-d)}
+.course.dark .target{color:var(--yellow)}
+.values{list-style:none;display:grid;gap:14px;margin-top:26px}
+.values li{display:flex;gap:14px;align-items:center}
+.values b{display:block;font-size:.95rem}
+.values li span:not(.ico){font-size:.84rem;color:var(--muted)}
+.ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--yellow);display:grid;place-items:center}
+.ico svg{width:22px;height:22px;fill:var(--black)}
+.ico.sm{width:38px;height:38px;border-radius:10px}
+.ico.sm svg{width:19px;height:19px}
+/* path timeline */
+.steps{position:relative}
+.steps::before{content:"";position:absolute;left:0;right:0;top:27px;height:2px;background:linear-gradient(90deg,var(--yellow),rgba(255,210,31,.15))}
+.step b{position:relative;display:inline-block;background:var(--black);padding-right:14px}
+/* gallery bento */
+.bento{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:230px 230px;gap:16px}
+.bento figure{position:relative;overflow:hidden;border-radius:6px;background:var(--ph)}
+.bento img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.bento figure:hover img{transform:scale(1.06)}
+.bento .b1{grid-row:1/3}
+.bento figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;color:#fff;font-weight:600;font-size:.88rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.gallery h3.cat{margin:44px 0 16px}
+.clip{position:relative;display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:16/10;padding:20px;border-radius:6px;overflow:hidden;color:var(--black);background:var(--yellow);transition:transform .25s}
+.clip.alt{background:var(--cyan)}
+.clip:hover{transform:translateY(-6px)}
+.clip::after{content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.25)}
+.clip .play{position:absolute;left:20px;top:20px;margin:0;background:var(--black);color:var(--yellow);width:52px;height:52px;z-index:1}
+.clip b{font-family:var(--head);font-size:1.6rem;text-transform:uppercase;line-height:1;position:relative;z-index:1}
+.clip small{font-size:.8rem;opacity:.75;position:relative;z-index:1}
+.gallery .more{margin-top:30px}
+/* schedule */
+.sch-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch;margin-top:10px}
+.sch-info{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.contact{list-style:none;display:grid;gap:16px}
+.contact li{display:flex;gap:14px;align-items:flex-start}
+.contact b{display:block;font-size:1rem}
+.contact li span:not(.ico){font-size:.88rem;color:var(--muted)}
+.contact a:hover{color:var(--cyan-d)}
+.sch-info table{width:100%;border-radius:6px;overflow:hidden}
+.pill{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;background:var(--yellow)}
+.pill.dk{background:var(--black);color:var(--white)}
+.sch-grid .map{margin:0;min-height:420px}
+.sch-grid .map iframe{height:100%;min-height:420px}
+/* signup */
+.sg-lead{font-size:1.05rem!important;margin-bottom:20px!important}
+.perks{list-style:none;display:grid;gap:12px;margin-bottom:28px}
+.perks li{display:flex;gap:12px;align-items:center;font-weight:600;font-size:.98rem}
+.perks li::before{content:"✓";flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--yellow);color:var(--black);font-size:.8rem;font-weight:800}
+.call{display:inline-flex;flex-direction:column;background:var(--black);color:var(--white);padding:16px 26px;border-radius:6px;margin-bottom:24px;transition:transform .25s}
+.call:hover{transform:translateY(-3px)}
+.call span{font-size:.74rem;color:#bbb;letter-spacing:.08em;text-transform:uppercase}
+.call b{font-family:var(--head);font-size:2rem;color:var(--yellow);letter-spacing:.03em;line-height:1.1}
+.signup .addr{font-size:.85rem!important}
+@media(max-width:900px){
+  .bento{grid-template-columns:1fr 1fr;grid-template-rows:240px 170px}
+  .bento .b1{grid-column:1/3;grid-row:1}
+  .sch-grid{grid-template-columns:1fr}
+  .steps::before{display:none}
+}
+@media(max-width:520px){.bento{grid-template-columns:1fr;grid-template-rows:200px 150px 150px}.bento .b1{grid-column:auto}.sch-grid .map,.sch-grid .map iframe{min-height:300px}}
 </style>
 </head>
 <body>
@@ -291,9 +356,15 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   <div class="wrap">
     <img class="photo" src="img/team1.jpg" alt="Đội bóng rổ Two T cùng huấn luyện viên chụp ảnh chung" width="394" height="172" loading="lazy">
     <div>
+      <span class="eyebrow">Về chúng tôi</span>
       <h2>Về Two T</h2>
       <p class="tag">Two T được thành lập với mong muốn tạo ra một sân chơi bóng rổ gần gũi, nơi mọi người đều có thể bắt đầu từ con số 0.</p>
       <p>Tại Two T, bóng rổ không chỉ là kỹ thuật. Đó là kỷ luật, tinh thần đồng đội và niềm vui được vận động, ở mọi lứa tuổi và mọi trình độ.</p>
+      <ul class="values">
+        <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 16.8 6.1 20l1.2-6.5L2.5 8.9 9.1 8z"/></svg></span><div><b>Kỷ luật</b><span>Tập đúng giờ, đúng kỹ thuật</span></div></li>
+        <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M2 20c0-3.6 2.7-6 6-6s6 2.4 6 6zM14.5 20c0-2.4 1-4.2 2.6-5 2.6.1 4.9 1.8 4.9 5z"/></svg></span><div><b>Đồng đội</b><span>Chơi cùng nhau, tiến cùng nhau</span></div></li>
+        <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span><div><b>Niềm vui</b><span>Vận động khỏe, tinh thần vui</span></div></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -373,7 +444,6 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
       <div class="stu"><div class="av">Ảnh</div><div><b>Gia Hân</b><span>Học viên nữ nổi bật với kỹ năng ném rổ ổn định.</span></div></div>
       <div class="stu"><div class="av">Ảnh</div><div><b>Quốc Bảo</b><span>Bắt đầu từ lớp cơ bản, nay đã lên lớp nâng cao.</span></div></div>
     </div>
-    <div class="two"><img class="photo wide" src="img/team1.jpg" alt="Đội Two T sau trận đấu" width="394" height="172" loading="lazy"><img class="photo wide" src="img/team3.jpg" alt="Học viên nhí Two T trên sân" width="394" height="149" loading="lazy"></div>
   </div>
 </section>
 
@@ -391,17 +461,19 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
 
 <section class="gallery" id="thu-vien">
   <div class="wrap">
+    <span class="eyebrow">Khoảnh khắc</span>
     <h2>Thư viện ảnh và video</h2>
-    <p class="lead" style="margin-bottom:0">Không khí buổi tập, những trận đấu và khoảnh khắc của Two T.</p>
-    <h3 class="cat">Buổi tập</h3>
-    <div class="grid4 stagger"><img class="photo" src="img/team2.jpg" alt="Buổi tập Two T 1" width="394" height="172" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Buổi tập Two T 2" width="394" height="172" loading="lazy"><img class="photo" src="img/team1.jpg" alt="Buổi tập Two T 3" width="394" height="172" loading="lazy"><img class="photo" src="img/team2.jpg" alt="Buổi tập Two T 4" width="394" height="172" loading="lazy"></div>
-    <h3 class="cat">Giải đấu và giao hữu</h3>
-    <div class="grid4 stagger"><img class="photo" src="img/team2.jpg" alt="Đội Two T chụp ảnh trên sân thi đấu" width="394" height="179" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Các học viên nhí Two T cùng phụ huynh và huấn luyện viên" width="394" height="149" loading="lazy"><img class="photo" src="img/team1.jpg" alt="Đội Two T cùng huấn luyện viên" width="394" height="172" loading="lazy"><img class="photo" src="img/team3.jpg" alt="Học viên Two T chụp ảnh lưu niệm" width="394" height="149" loading="lazy"></div>
+    <p class="lead">Không khí buổi tập, những trận đấu và khoảnh khắc của Two T.</p>
+    <div class="bento stagger">
+      <figure class="b1"><img src="img/team1.jpg" alt="Đội Two T cùng huấn luyện viên" width="394" height="172" loading="lazy"><figcaption>Toàn đội Two T</figcaption></figure>
+      <figure class="b2"><img src="img/team2.jpg" alt="Đội Two T chụp ảnh trên sân thi đấu" width="394" height="179" loading="lazy"><figcaption>Giải đấu và giao hữu</figcaption></figure>
+      <figure class="b3"><img src="img/team3.jpg" alt="Các học viên nhí Two T cùng phụ huynh và huấn luyện viên" width="394" height="149" loading="lazy"><figcaption>Lớp thiếu nhi</figcaption></figure>
+    </div>
     <h3 class="cat">Clip highlight</h3>
     <div class="grid3 stagger">
-      <a class="ph vid" href="#" style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(img/team1.jpg)"><div><div class="play">▶</div><span style="color:#fff;font-weight:600">Highlight 1</span></div></a>
-      <a class="ph vid" href="#" style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(img/team2.jpg)"><div><div class="play">▶</div><span style="color:#fff;font-weight:600">Highlight 2</span></div></a>
-      <a class="ph vid" href="#" style="background-image:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(img/team3.jpg)"><div><div class="play">▶</div><span style="color:#fff;font-weight:600">Highlight 3</span></div></a>
+      <a class="clip" href="#"><span class="play">▶</span><b>Highlight 1</b><small>[Tên clip / trận đấu]</small></a>
+      <a class="clip alt" href="#"><span class="play">▶</span><b>Highlight 2</b><small>[Tên clip / trận đấu]</small></a>
+      <a class="clip" href="#"><span class="play">▶</span><b>Highlight 3</b><small>[Tên clip / trận đấu]</small></a>
     </div>
     <a href="https://www.facebook.com/profile.php?id=100091800505630" target="_blank" rel="noopener" class="btn btn-k more">Xem thêm trên Facebook / TikTok</a>
   </div>
@@ -409,29 +481,35 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
 
 <section class="schedule" id="lich-tap">
   <div class="wrap">
+    <span class="eyebrow">Đến sân tập</span>
     <h2>Lịch tập và địa điểm</h2>
-    <p class="lead" style="margin-bottom:22px">Sân tập: <b>Sân vận động Thới Tứ</b><br>2/5A Trịnh Thị Miếng, Ấp Thới Tứ 1, Hóc Môn, Thành phố Hồ Chí Minh<br>Liên hệ: <a href="tel:0385501560"><b>0385 501 560</b></a></p>
-    <div style="overflow-x:auto">
-    <table>
-      <thead><tr><th>Ngày</th><th>Giờ</th><th>Lớp</th></tr></thead>
-      <tbody>
-        <tr><td>Thứ 2 – 4 – 6</td><td>17h30 – 19h00</td><td>Cơ bản</td></tr>
-        <tr><td>Thứ 3 – 5 – 7</td><td>17h30 – 19h00</td><td>Cơ bản</td></tr>
-        <tr><td>Thứ 3 – 5 – 7</td><td>19h30 – 21h00</td><td>Nâng cao</td></tr>
-      </tbody>
-    </table>
+    <div class="sch-grid">
+      <div class="sch-info">
+        <ul class="contact">
+          <li><span class="ico sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 119.5 9 2.5 2.5 0 0112 11.5z"/></svg></span><div><b>Sân vận động Thới Tứ</b><span>2/5A Trịnh Thị Miếng, Ấp Thới Tứ 1, Hóc Môn, Thành phố Hồ Chí Minh</span></div></li>
+          <li><span class="ico sm"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11 11 0 003.5.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.4.56 3.5a1 1 0 01-.25 1z"/></svg></span><div><b><a href="tel:0385501560">0385 501 560</a></b><span>Gọi hoặc nhắn tin để được tư vấn</span></div></li>
+        </ul>
+        <table>
+          <thead><tr><th>Ngày</th><th>Giờ</th><th>Lớp</th></tr></thead>
+          <tbody>
+            <tr><td>Thứ 2 – 4 – 6</td><td>17h30 – 19h00</td><td><span class="pill">Cơ bản</span></td></tr>
+            <tr><td>Thứ 3 – 5 – 7</td><td>17h30 – 19h00</td><td><span class="pill">Cơ bản</span></td></tr>
+            <tr><td>Thứ 3 – 5 – 7</td><td>19h30 – 21h00</td><td><span class="pill dk">Nâng cao</span></td></tr>
+          </tbody>
+        </table>
+        <a class="btn btn-k" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=2/5A%20Tr%E1%BB%8Bnh%20Th%E1%BB%8B%20Mi%E1%BA%BFng%2C%20%E1%BA%A4p%20Th%E1%BB%9Bi%20T%E1%BB%A9%201%2C%20H%C3%B3c%20M%C3%B4n%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh">Chỉ đường bằng Google Maps</a>
+      </div>
+      <div class="map">
+        <iframe title="Bản đồ Sân vận động Thới Tứ" src="https://www.google.com/maps?q=2/5A%20Tr%E1%BB%8Bnh%20Th%E1%BB%8B%20Mi%E1%BA%BFng%2C%20%E1%BA%A4p%20Th%E1%BB%9Bi%20T%E1%BB%A9%201%2C%20H%C3%B3c%20M%C3%B4n%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
     </div>
-    <div class="map">
-      <iframe title="Bản đồ Sân vận động Thới Tứ" src="https://www.google.com/maps?q=2/5A%20Tr%E1%BB%8Bnh%20Th%E1%BB%8B%20Mi%E1%BA%BFng%2C%20%E1%BA%A4p%20Th%E1%BB%9Bi%20T%E1%BB%A9%201%2C%20H%C3%B3c%20M%C3%B4n%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-    </div>
-    <a class="btn btn-k" style="margin-top:16px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=2/5A%20Tr%E1%BB%8Bnh%20Th%E1%BB%8B%20Mi%E1%BA%BFng%2C%20%E1%BA%A4p%20Th%E1%BB%9Bi%20T%E1%BB%A9%201%2C%20H%C3%B3c%20M%C3%B4n%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh">Chỉ đường bằng Google Maps</a>
   </div>
 </section>
 
 <section class="faq">
   <div class="wrap">
     <h2>Câu hỏi thường gặp</h2>
-    <details><summary>Chưa biết chơi bóng rổ có học được không?</summary><p>Được. Các lớp có bài giảng cho người chưa từng chơi, lo cả trẻ em và người lớn.</p></details>
+    <details open><summary>Chưa biết chơi bóng rổ có học được không?</summary><p>Được. Các lớp có bài giảng cho người chưa từng chơi, lo cả trẻ em và người lớn.</p></details>
     <details><summary>Buổi học thử có mất phí không?</summary><p>Buổi học thử đầu tiên miễn phí. Bạn chỉ cần đăng ký trước để huấn luyện viên sắp xếp chỗ.</p></details>
     <details><summary>Cần chuẩn bị gì khi đến tập?</summary><p>Giày thể thao, quần áo gọn nhẹ và chai nước. Bóng sẽ có sẵn tại sân.</p></details>
     <details><summary>Học phí tính như thế nào?</summary><p>Học phí tính theo tháng. Có ưu đãi khi đăng ký theo quý hoặc đăng ký cho anh chị em cùng học.</p></details>
@@ -442,9 +520,14 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
   <div class="wrap">
     <div>
       <h2>Đăng ký học thử</h2>
-      <p>Để lại thông tin, Two T sẽ liên hệ xếp lịch buổi học thử phù hợp với bạn hoặc con bạn.</p>
-      <p><b>Liên hệ:</b> 0385 501 560</p>
-      <p><b>Địa chỉ:</b> Sân vận động Thới Tứ, 2/5A Trịnh Thị Miếng, Ấp Thới Tứ 1, Hóc Môn, Thành phố Hồ Chí Minh</p>
+      <p class="sg-lead">Để lại thông tin, Two T sẽ liên hệ xếp lịch buổi học thử phù hợp với bạn hoặc con bạn.</p>
+      <ul class="perks">
+        <li>Buổi học thử đầu tiên miễn phí</li>
+        <li>Không cần mang bóng, sân có sẵn</li>
+        <li>Huấn luyện viên tư vấn lớp phù hợp</li>
+      </ul>
+      <a class="call" href="tel:0385501560"><span>Hoặc gọi ngay</span><b>0385 501 560</b></a>
+      <p class="addr"><b>Địa chỉ:</b> Sân vận động Thới Tứ, 2/5A Trịnh Thị Miếng, Ấp Thới Tứ 1, Hóc Môn, TP. Hồ Chí Minh</p>
     </div>
     <form id="f" novalidate>
       <label>Họ và tên<input name="name" required autocomplete="name"></label>
@@ -495,7 +578,7 @@ const co=new IntersectionObserver(es=>es.forEach(x=>{
   const t=+x.target.dataset.count,suf=x.target.dataset.suf||'';
   if(reduce){return}
   const st=performance.now(),d=1400;
-  (function f(n){const p=Math.min((n-st)/d,1),e=1-Math.pow(1-p,3);x.target.textContent=Math.round(t*e)+(p<1?'':suf);if(p<1)requestAnimationFrame(f)})(st);
+  (function f(n){const p=Math.min((n-st)/d,1),e=1-Math.pow(1-p,3);x.target.textContent=Math.round(t*e)+suf;if(p<1)requestAnimationFrame(f)})(st);
 }),{threshold:.6});
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 </script>
