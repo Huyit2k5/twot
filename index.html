@@ -140,10 +140,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .ach-card p{font-size:.82rem;color:#444}
 .ach h3.sub{font-size:1.6rem;margin-bottom:22px}
 .students{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
-.stu{display:flex;gap:14px;font-size:.8rem}
-.stu .av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ph);display:grid;place-items:center;font-size:.65rem;color:#888}
-.stu b{display:block}
-.stu span{color:var(--muted)}
+.stu-img{aspect-ratio:4/3;object-fit:cover;transition:transform .4s,box-shadow .4s}
+.stu-img:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.18)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .two .ph{aspect-ratio:16/8}
 
@@ -440,9 +438,9 @@ nav.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.4)}
     </div>
     <h3 class="sub">Học viên nổi bật</h3>
     <div class="students stagger">
-      <div class="stu"><div class="av">Ảnh</div><div><b>Minh Khang</b><span>Tiến bộ nhanh, trở thành chủ lực đội thiếu niên sau 1 năm.</span></div></div>
-      <div class="stu"><div class="av">Ảnh</div><div><b>Gia Hân</b><span>Học viên nữ nổi bật với kỹ năng ném rổ ổn định.</span></div></div>
-      <div class="stu"><div class="av">Ảnh</div><div><b>Quốc Bảo</b><span>Bắt đầu từ lớp cơ bản, nay đã lên lớp nâng cao.</span></div></div>
+      <img class="photo stu-img" src="img/team1.jpg" alt="Học viên nổi bật của Two T" width="394" height="172" loading="lazy" style="object-position:70% 50%">
+      <img class="photo stu-img" src="img/team2.jpg" alt="Học viên nổi bật của Two T" width="394" height="179" loading="lazy" style="object-position:50% 40%">
+      <img class="photo stu-img" src="img/team3.jpg" alt="Học viên nổi bật của Two T" width="394" height="149" loading="lazy" style="object-position:30% 50%">
     </div>
   </div>
 </section>
